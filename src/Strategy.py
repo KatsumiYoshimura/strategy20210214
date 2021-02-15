@@ -112,6 +112,10 @@ for i in range(1,steps+1):
     total_p.append(x[int(0.65*sample_number)] + cash_current)
 
 # %%
+# 必要金額を捻出できない確率
+print(np.count_nonzero(x < 0)/len(x))
+
+# %%
 plt.plot(x_avg , label="Average")
 plt.plot(x_half , label= "Half")
 plt.plot(x_var , label= "Value At Risk")
